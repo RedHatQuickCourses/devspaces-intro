@@ -1,9 +1,7 @@
-name: placeholder-course-name
-title: Placeholder Course Title
-version: 1
+name: devspaces-intro
+title: Introduction to Red Hat OpenShift Dev Spaces
+version: 3
 nav:
 - modules/ROOT/nav.adoc
-- modules/chapter1/nav.adoc
-- modules/chapter2/nav.adoc
-- modules/chapter3/nav.adoc
-- modules/appendix/nav.adoc
+- modules/introduction/nav.adoc
+- modules/features/nav.adoc
