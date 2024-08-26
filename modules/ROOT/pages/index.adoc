@@ -1,6 +1,22 @@
-= An Example Quick Course
+= Introduction to Red Hat OpenShift Dev Spaces
 :navtitle: Home
 
-== Introduction
+Welcome to this quick course on the _Introduction to Red{nbsp}Hat OpenShift Dev Spaces_.
+This course is the first in a series of 5 courses about **Red{nbsp}Hat OpenShift Dev Spaces**:
 
-This is an example quick course demonstrating the usage of Antora for authoring and publishing quick courses.
+. Introduction to Red Hat OpenShift Dev Spaces (_This course_)
+. Red Hat OpenShift Dev Spaces Administration (_Under Development_)
+. Securing Access to Red Hat OpenShift Dev Spaces (_Under Development_)
+. Creating and Customizing Workspaces in Red Hat OpenShift Dev Spaces (_Under Development_)
+. Configuring Plugins in Red Hat OpenShift Dev Spaces (_Under Development_)
+
+NOTE: This introductory course is focused on the **"WHAT"** and **"WHY"** of Red Hat OpenShift Dev Spaces.
+The **"HOW"** (detailed configuration, workspace creation, customization, and integration of plugins) is covered in the later courses in the learning path (courses 2 to 5).
+
+== Objectives
+
+The overall objectives of this course include:
+
+* _Introduction to Red Hat OpenShift Dev Spaces and its business value_
+* _Describe the architecture and components of Red Hat OpenShift Dev Spaces_
+* _Explore the core features in Red Hat OpenShift Dev Spaces_

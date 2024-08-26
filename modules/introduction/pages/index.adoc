@@ -1,3 +1,9 @@
-= Chapter 1
+= Introduction to Red Hat OpenShift Dev Spaces
 
-This is the home page of _Chapter_ 1 in the *hello* quick course...
+This chapter introduces the concept of web-based _Integrated Development Environment (**IDE**)_ and the features of Red Hat OpenShift Dev Spaces.
+You will also learn about the architecture and components of the product.
+
+== Goals
+
+* Identify the main features of Red Hat OpenShift Dev Spaces
+* Describe the architecture and components of Red Hat OpenShift Dev Spaces
