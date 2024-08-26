@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction :: Introduction to Red Hat OpenShift Dev Spaces</title>
+    <link rel="prev" href="index.html">
+    <link rel="next" href="arch.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Introduction to Red Hat OpenShift Dev Spaces</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/devspaces-intro/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="devspaces-intro" data-version="3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Introduction to Red Hat OpenShift Dev Spaces</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Introduction to Red Hat OpenShift Dev Spaces</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="arch.html">Architecture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Introduction to Red Hat OpenShift Dev Spaces</span>
+    <span class="version">3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Introduction to Red Hat OpenShift Dev Spaces</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Introduction to Red Hat OpenShift Dev Spaces</a></li>
+    <li><a href="intro.html">Introduction</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Technology companies developing cutting edge software solutions are increasingly focusing on the <strong>Developer Experience (DevEx)</strong> to improve productivity and reduce time to market. Focusing on improving the developer experience has numerous advantages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reduced cognitive load for developers</p>
+</li>
+<li>
+<p>Reduced software development costs</p>
+</li>
+<li>
+<p>Increased software delivery speed</p>
+</li>
+<li>
+<p>Increased software quality</p>
+</li>
+<li>
+<p>Reduced burnout &#8594; happier developers &#8594; reduced attrition and higher retention rate</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Developer Experience is the <strong>user experience</strong> that developers are subject to when developing applications using a platform, along with a host of supporting tools, utilities and workflows.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>The developer experience is a major component of, and usually related to the following terms:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Internal Developer Platform (IDP)</dt>
+<dd>
+<p>The set of tools and processes that software developers use to create business capabilities, and deploy them in production.</p>
+</dd>
+<dt class="hdlist1">Platform Engineering</dt>
+<dd>
+<p>A diverse group of technology professionals - developers, system administrators, site reliability engineers (SRE) that build, run, and maintain an internal developer platform.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_developer_experience_challenges"><a class="anchor" href="#_developer_experience_challenges"></a>Developer Experience Challenges</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following are some of the challenges developers face in their day to day tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Developer Productivity</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Lengthy onboarding of new developers before they become productive</p>
+</li>
+<li>
+<p>Complexity in getting started, a lot of tooling, SDKs, IDE setup and configuration needs to be done</p>
+</li>
+<li>
+<p>Challenges in reproducing production environment in development/QA</p>
+</li>
+<li>
+<p>For modern cloud-native applications, production is on Kubernetes/OpenShift, while development happens on laptops and workstations</p>
+</li>
+<li>
+<p>Devs have programming knowledge, but little experience with containers and Kubernetes/OpenShift in production</p>
+</li>
+<li>
+<p>It is complex and difficult to switch between different projects having different stacks and different versions of programming language runtime environments</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Legacy Hardware and security challenges</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Laptops are hard to secure, and easy to lose, putting sensitive source code at risk</p>
+</li>
+<li>
+<p>More and more requirements and regulatory pressure to develop in secure and controlled environments</p>
+</li>
+<li>
+<p>Virtual Desktop Interface (VDI) solutions are slow and painful for developers, making them less agile and effective</p>
+</li>
+<li>
+<p>Laptop and workstation hardware cannot handle the demanding processing capacity to develop and test large, complex applications - upper bounds on multiple CPU cores, CPU speed and memory sizes</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cloud_development_environments_cdes_what_and_why"><a class="anchor" href="#_cloud_development_environments_cdes_what_and_why"></a>Cloud Development Environments (CDEs): What and Why?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With the increasing capabilities provided by the cloud and modern Javascript front-end user interfaces to host applications of all types, it makes sense to explore the concept of a portable, cloud-based developer environment that can be accessed by a diverse group of developers spread over multiple geographies, with just a modern browser.</p>
+</div>
+<div class="paragraph">
+<p>Enter the concept of a <strong>Cloud Development Environment</strong>.</p>
+</div>
+<div class="paragraph">
+<p>According to <a href="https://www.gartner.com/reviews/market/cloud-development-environments-cdes" target="_blank" rel="noopener">Gartner</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Cloud development environments (CDEs) provide software developers with remote, ready-to-use access to a cloud-hosted development environment with minimal effort for setup and configuration. They comprise elements of a traditional IDE, such as code editing, debugging, code review and code collaboration. They also provide consistent, secure developer access to preconfigured development workspaces. This frees them from setting up their own local environments, eliminating the need to install and maintain dependencies, software development kits, security patches and plug-ins. Their seamless integration with Git-based repositories and continuous integration/continuous delivery (CI/CD) tools enhances developer productivity and developer experience. CDEs provide a scalable way to support a distributed workforce and hybrid work environments.
+</blockquote>
+<div class="attribution">
+&#8212; Gartner<br>
+<cite>"What are Cloud Development Environments (CDEs)?"</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>The advantages of a CDE are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Near-instant provisioning of developer environments, on-demand for a new developer</p>
+</li>
+<li>
+<p>Ability to reproduce cloud-native production environments in development (to speedy releases, and reduce the cliché of <em>“but, it it works on my machine!&#8230;&#8203;”</em>)</p>
+</li>
+<li>
+<p>Bring the day-to-day tasks that a developer does on his local machine (writing code, testing, debugging, and more), to a web based IDE to improve the same developer experience.</p>
+</li>
+<li>
+<p>Seamless switching between different projects with different stacks and different versions of programming language runtimes</p>
+</li>
+<li>
+<p>Centralized security and access to source code backed by enterprise security standards (OAuth/OIDC, TLS)</p>
+</li>
+<li>
+<p>Fine-grained resource control and multi-tenancy.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_red_hat_openshift_dev_spaces"><a class="anchor" href="#_red_hat_openshift_dev_spaces"></a>Red Hat OpenShift Dev Spaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Red Hat OpenShift Dev Spaces</strong> is a cloud development environment (CDE) service for the OpenShift Container Platform. It provides a container based integrated development environment (IDE) with a consistent, secure, and zero-configuration approach. The experience is as smooth, fast and familiar as an integrated development environment (IDE) on your laptop.</p>
+</div>
+<div class="paragraph">
+<p>Red Hat OpenShift Dev Spaces is built on top the open source <a href="https://eclipse.dev/che" target="_blank" rel="noopener">Eclipse Che</a> project. Using Dev Spaces on OpenShift, source code never leaves IT-secured servers, but developers still have their development “sandbox.”</p>
+</div>
+<div class="paragraph">
+<p>Watch this short 10-minute video for a brief introduction to Dev Spaces:</p>
+</div>
+<div class="videoblock">
+<div class="title">Red Hat OpenShift Dev Spaces Overview</div>
+<div class="content">
+<iframe width="800" height="600" src="https://www.youtube.com/embed/DrdcRoZOO9A?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>The following are the notable features of the product:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>VS Code and JetBrains IDEs in the browser</strong> - OpenShift Dev Spaces includes <strong>Microsoft Visual Studio Code - Open Source</strong> and <strong>JetBrains IntelliJ IDEA</strong>. You can choose which IDE to run in your cloud development environments. You need a machine capable of running a modern web browser to code, build, test, deploy, and debug on OpenShift. Administrators and developers can customize their Dev Spaces instance to support multiple programming language environments. Each developer gets his own dedicated <strong>Workspace</strong> to work with source code.</p>
+</li>
+<li>
+<p><strong>Developer workspaces defined as code</strong> - Customize your workspaces using a YAML file (called a <strong>Devfile</strong>). The development environments are defined as code, which makes them consistent and eliminates "works on my machine" issues. You can customize the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Resource allocation (CPU, Memory and Storage)</p>
+</li>
+<li>
+<p>Pre-defined commands to build, test, debug, and run code</p>
+</li>
+<li>
+<p>Containers with development tools</p>
+</li>
+<li>
+<p>Containers or Kubernetes manifest for services required for testing</p>
+</li>
+<li>
+<p>Workspace start and stop events lets you further customize your environment on entry and exit</p>
+</li>
+<li>
+<p>Source code repositories (Git) integration. You can push and pull code to and from Git repositories from within the workspace</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Enterprise integration</strong> - The cloud development environments run inside the organization network, and the source code access is secured using the same tools used across the rest of the organization. Workspaces can be automatically configured with enterprise proxy and trusted TLS certificate bundles. Access to the workspaces is secured using OpenShift OAuth and allows LDAP or Active Directory (AD). Administrators can easily manage and monitor workspaces as any other Kubernetes resource.</p>
+</li>
+<li>
+<p><strong>Kubernetes/OpenShift development made easy</strong> - Build and test cloud-native applications on OpenShift without having to configure access credentials manually. Development environments run on OpenShift, and are pre-configured with developer credentials.</p>
+</li>
+<li>
+<p><strong>Ready-to-use Templates based on Red Hat technologies</strong> - Leverage the bundled well-tested, certified container images for popular stacks (programming language environments) as the base for your enterprise-grade applications. Use images as is, or customize it further to adapt to your needs. You can maintain custom images and Devfiles in your own Devfile registry.</p>
+</li>
+<li>
+<p><strong>Efficient image builds with fuse-overlayfs storage driver</strong> - enable faster builds and more optimized storage usage for <code>podman build</code> and <code>buildah</code> tools within your Red Hat OpenShift Dev Spaces workspace.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_differences_between_eclipse_che_and_red_hat_openshift_dev_spaces"><a class="anchor" href="#_differences_between_eclipse_che_and_red_hat_openshift_dev_spaces"></a>Differences between Eclipse Che and Red Hat OpenShift Dev Spaces</h3>
+<div class="paragraph">
+<p>Although Red Hat OpenShift Dev Spaces is based on the upstream, open source Eclipse Che project, there are several key differences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Red Hat provides subscriptions, QA, and packaging to ensure enterprise-level support for Red Hat OpenShift Dev Spaces. See <a href="https://access.redhat.com/node/3877301" target="_blank" rel="noopener">Red Hat OpenShift Dev Spaces life-cycle and support policy</a> for details</p>
+</li>
+<li>
+<p>Dev Spaces is supported only on Red Hat OpenShift</p>
+</li>
+<li>
+<p>Dev Spaces is based on Red Hat Enterprise Linux (RHEL) and is regularly updated to include the latest security fixes</p>
+</li>
+<li>
+<p>Dev Spaces provides several useful Devfiles by default, for working with languages and technologies such as Quarkus, Spring Boot, Javascript/Node.js, Ruby, Python, DotNet, Go, C/C++, PHP, and more</p>
+</li>
+<li>
+<p>Dev Spaces uses OpenShift OAuth for user login and management by default</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_demonstration_walkthrough_of_red_hat_openshift_dev_spaces_features"><a class="anchor" href="#_demonstration_walkthrough_of_red_hat_openshift_dev_spaces_features"></a>Demonstration: Walkthrough of Red Hat OpenShift Dev Spaces features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Watch this short 20-minute video showing a brief walkthrough of the most important features of Dev Spaces. You can play with the product for free by launching your own instance by going to <a href="https://developers.redhat.com/products/openshift-dev-spaces/overview" class="bare">https://developers.redhat.com/products/openshift-dev-spaces/overview</a>.</p>
+</div>
+<div class="videoblock">
+<div class="title">Walkthrough of Red Hat OpenShift Dev Spaces features</div>
+<div class="content">
+<iframe width="800" height="600" src="https://www.youtube.com/embed/Jfd0F0-uYfU?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.gartner.com/reviews/market/cloud-development-environments-cdes" target="_blank" rel="noopener">Gartner: Cloud Development Environments</a></p>
+</li>
+<li>
+<p><a href="https://eclipse.dev/che" target="_blank" rel="noopener">Eclipse Che</a></p>
+</li>
+<li>
+<p><a href="https://www.redhat.com/en/success-stories/capgemini?extIdCarryOver=true&amp;sc_cid=7015Y0000048OxfQAE" target="_blank" rel="noopener">Red Hat OpenShift Dev Spaces Success Story: Capgemini</a></p>
+</li>
+<li>
+<p><a href="https://blog.cszevaco.com/blog/devspaces" target="_blank" rel="noopener">From a laptop centric IDE to project centric IDEs</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Introduction to Red Hat OpenShift Dev Spaces</a></span>
+  <span class="next"><a href="arch.html">Architecture</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

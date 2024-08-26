@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Architecture :: Introduction to Red Hat OpenShift Dev Spaces</title>
+    <link rel="prev" href="intro.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Introduction to Red Hat OpenShift Dev Spaces</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/devspaces-intro/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="devspaces-intro" data-version="3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Introduction to Red Hat OpenShift Dev Spaces</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Introduction to Red Hat OpenShift Dev Spaces</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="arch.html">Architecture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Introduction to Red Hat OpenShift Dev Spaces</span>
+    <span class="version">3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Introduction to Red Hat OpenShift Dev Spaces</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Introduction to Red Hat OpenShift Dev Spaces</a></li>
+    <li><a href="arch.html">Architecture</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Architecture</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section will briefly cover the high-level architecture and components of Red Hat OpenShift Dev Spaces.</p>
+</div>
+<div class="paragraph">
+<p>Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the OpenShift Container Platform, and delegates several responsibilities around security, user management, resource allocation and multi-tenancy to the underlying base platform.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_high_level_components"><a class="anchor" href="#_high_level_components"></a>High Level Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The product consists of a set of components interacting with each other to provide the necessary functionality for a web-based IDE.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/devspaces-arch.png" alt="devspaces arch">
+</div>
+<div class="title">Figure 1. Red Hat OpenShift Dev Spaces Architecture (High Level)</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dev_spaces_operator"><a class="anchor" href="#_dev_spaces_operator"></a>Dev Spaces operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OpenShift Dev Spaces operator managed the lifecycle of the  <strong>Dev Spaces server</strong> components. The following are the important points to note:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>OpenShift Dev Spaces controller</strong></dt>
+<dd>
+<p>Creates and controls the necessary OpenShift objects to run a OpenShift Dev Spaces instance, such as pods, services, and persistent volumes.</p>
+</dd>
+<dt class="hdlist1"><strong>CheCluster custom resource (CR)</strong></dt>
+<dd>
+<p>On a cluster with the OpenShift Dev Spaces operator installed, you will create a CheCluster custom resource (CR). The OpenShift Dev Spaces operator ensures the full lifecycle management of the OpenShift Dev Spaces server components on this OpenShift Dev Spaces instance:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Dev Workspace operator</p>
+</li>
+<li>
+<p>Gateway</p>
+</li>
+<li>
+<p>User dashboard</p>
+</li>
+<li>
+<p>Devfile registries</p>
+</li>
+<li>
+<p>Dev Spaces server</p>
+</li>
+<li>
+<p>Plug-in registry</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dev_workspace_operator"><a class="anchor" href="#_dev_workspace_operator"></a>Dev Workspace operator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Dev Workspace operator extends OpenShift API to provide <strong>DevWorkspaces</strong> objects, a Custom Resource specialized for development environment provisioning. The following are the important points to note:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Dev Workspace custom resource definition</dt>
+<dd>
+<p>Creates Dev Workspace OpenShift objects from <strong>Devfile</strong> specifications.</p>
+</dd>
+<dt class="hdlist1">Dev Workspace controller</dt>
+<dd>
+<p>Creates and controls the necessary OpenShift objects to run a Dev Workspace, such as pods, services, and persistent volumes.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_dashboard"><a class="anchor" href="#_user_dashboard"></a>User dashboard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The user dashboard is a web application to launch <strong>Workspaces</strong>. It lets authenticated users create, manage, stop or delete <strong>DevWorkspaces</strong>. It parses and converts a <strong>Devfile</strong> provided by an authenticated user into OpenShift Custom Resources.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_devfile_registries"><a class="anchor" href="#_devfile_registries"></a>Devfile registries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Workspaces are created using <strong>Devfiles</strong>. Devfiles are YAML configuration files stored in a Git repository. The OpenShift Dev Spaces Devfile registry provides a list of sample Devfiles to create workspaces. The User dashboard displays the samples list on the Dashboard. Each sample includes a <strong>Devfile</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dev_spaces_server"><a class="anchor" href="#_dev_spaces_server"></a>Dev Spaces server</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OpenShift Dev Spaces server is responsible for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creating user namespaces for each workspace launched from the User Dashboard</p>
+</li>
+<li>
+<p>Provisioning required secrets and config maps</p>
+</li>
+<li>
+<p>Integrating with Git services providers, to fetch and validate Devfiles and perform authentication</p>
+</li>
+<li>
+<p>Providing a REST API for other components and external services</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_plug_in_registry"><a class="anchor" href="#_plug_in_registry"></a>Plug-in registry</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each OpenShift Dev Spaces workspace starts with a specific editor and set of associated IDE extensions. The OpenShift Dev Spaces plugin registry provides the list of available editors and editor extensions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_workspaces"><a class="anchor" href="#_user_workspaces"></a>User workspaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong>Workspace</strong> is composed of Pods, Services, Ingresses, Storage Volumes and other OpenShift objects. These resources enable developers to code, test, build, debug and deploy applications using a web based IDE. User workspaces are web IDEs running in containers.</p>
+</div>
+<div class="paragraph">
+<p>A OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.</p>
+</div>
+<div class="paragraph">
+<p>The Devfile is used to specify the tools and runtime applications in a OpenShift Dev Spaces workspace.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gateway"><a class="anchor" href="#_gateway"></a>Gateway</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OpenShift Dev Spaces gateway, based on the open source <a href="https://traefik.io/traefik">Traefik</a> cloud-native API gateway and proxy server, has the following roles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Routing requests from end users.</p>
+</li>
+<li>
+<p>Authenticating users with <em>OpenID Connect (OIDC)</em>. It uses the <em>OpenShift OAuth2</em> proxy.</p>
+</li>
+<li>
+<p>Applying OpenShift Role based access control (RBAC) policies to control access to any OpenShift Dev Spaces resource.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It controls access to the following components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>User dashboard</p>
+</li>
+<li>
+<p>Devfile registries</p>
+</li>
+<li>
+<p>Dev Spaces server</p>
+</li>
+<li>
+<p>Plug-in registry</p>
+</li>
+<li>
+<p>User workspaces</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references"><a class="anchor" href="#_references"></a>References</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://eclipse.dev/che/technology/" target="_blank" rel="noopener">Eclipse Che Architecture</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="intro.html">Introduction</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
