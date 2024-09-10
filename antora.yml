@@ -4,4 +4,3 @@ version: 3
 nav:
 - modules/ROOT/nav.adoc
 - modules/introduction/nav.adoc
-- modules/features/nav.adoc
