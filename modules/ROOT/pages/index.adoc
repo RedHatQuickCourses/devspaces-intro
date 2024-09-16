@@ -17,6 +17,7 @@ The **"HOW"** (detailed configuration, workspace creation, customization, and in
 
 The overall objectives of this course include:
 
-* _Introduction to Red Hat OpenShift Dev Spaces and its business value_
+* _Discover the business value of Red Hat OpenShift Dev Spaces and its key features._
+// It is advisable to start the sentence with an action verb.
 * _Describe the architecture and components of Red Hat OpenShift Dev Spaces_
 * _Explore the core features in Red Hat OpenShift Dev Spaces_
