@@ -2,7 +2,7 @@
 
 This section will briefly cover the high-level architecture and components of Red Hat OpenShift Dev Spaces.
 
-Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the OpenShift Container Platform, and delegates several responsibilities around security, user management, resource allocation and multi-tenancy to the underlying base platform.
+Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the OpenShift Container Platform, and delegates several responsibilities around security, user management, resource allocation, and multi-tenancy to the underlying base platform.
 
 == High Level Components
 
@@ -15,7 +15,7 @@ image::devspaces-arch.png[title=Red Hat OpenShift Dev Spaces Architecture (High 
 The OpenShift Dev Spaces operator managed the lifecycle of the  **Dev Spaces server** components. The following are the important points to note:
 
 **OpenShift Dev Spaces controller**::
-Creates and controls the necessary OpenShift objects to run a OpenShift Dev Spaces instance, such as pods, services, and persistent volumes.
+Creates and controls the necessary OpenShift objects to run an OpenShift Dev Spaces instance, such as pods, services, and persistent volumes.
 
 **CheCluster custom resource (CR)**::
 On a cluster with the OpenShift Dev Spaces operator installed, you will create a CheCluster custom resource (CR). The OpenShift Dev Spaces operator ensures the full lifecycle management of the OpenShift Dev Spaces server components on this OpenShift Dev Spaces instance:
@@ -39,7 +39,7 @@ Creates and controls the necessary OpenShift objects to run a Dev Workspace, suc
 
 == User dashboard
 
-The user dashboard is a web application to launch *Workspaces*. It lets authenticated users create, manage, stop or delete **DevWorkspaces**. It parses and converts a **Devfile** provided by an authenticated user into OpenShift Custom Resources.
+The user dashboard is a web application to launch *Workspaces*. It lets authenticated users create, manage, stop, or delete **DevWorkspaces**. It parses and converts a **Devfile** provided by an authenticated user into OpenShift Custom Resources.
 
 == Devfile registries
 
@@ -60,11 +60,11 @@ Each OpenShift Dev Spaces workspace starts with a specific editor and set of ass
 
 == User workspaces
 
-A **Workspace** is composed of Pods, Services, Ingresses, Storage Volumes and other OpenShift objects. These resources enable developers to code, test, build, debug and deploy applications using a web based IDE. User workspaces are web IDEs running in containers.
+A **Workspace** is composed of Pods, Services, Ingresses, Storage Volumes, and other OpenShift objects. These resources enable developers to code, test, build, debug, and deploy applications using a web based IDE. User workspaces are web IDEs running in containers.
 
-A OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.
+An OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.
 
-The Devfile is used to specify the tools and runtime applications in a OpenShift Dev Spaces workspace.
+The Devfile is used to specify the tools and runtime applications in an OpenShift Dev Spaces workspace.
 
 == Gateway
 
@@ -72,7 +72,7 @@ The OpenShift Dev Spaces gateway, based on the open source https://traefik.io/tr
 
 * Routing requests from end users.
 * Authenticating users with _OpenID Connect (OIDC)_. It uses the _OpenShift OAuth2_ proxy.
-* Applying OpenShift Role based access control (RBAC) policies to control access to any OpenShift Dev Spaces resource.
+* Applying OpenShift Role-based access control (RBAC) policies to control access to any OpenShift Dev Spaces resource.
 
 It controls access to the following components:
 
