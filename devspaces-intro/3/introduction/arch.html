@@ -103,7 +103,7 @@
 <p>This section will briefly cover the high-level architecture and components of Red Hat OpenShift Dev Spaces.</p>
 </div>
 <div class="paragraph">
-<p>Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the OpenShift Container Platform, and delegates several responsibilities around security, user management, resource allocation and multi-tenancy to the underlying base platform.</p>
+<p>Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the OpenShift Container Platform, and delegates several responsibilities around security, user management, resource allocation, and multi-tenancy to the underlying base platform.</p>
 </div>
 </div>
 </div>
@@ -131,7 +131,7 @@
 <dl>
 <dt class="hdlist1"><strong>OpenShift Dev Spaces controller</strong></dt>
 <dd>
-<p>Creates and controls the necessary OpenShift objects to run a OpenShift Dev Spaces instance, such as pods, services, and persistent volumes.</p>
+<p>Creates and controls the necessary OpenShift objects to run an OpenShift Dev Spaces instance, such as pods, services, and persistent volumes.</p>
 </dd>
 <dt class="hdlist1"><strong>CheCluster custom resource (CR)</strong></dt>
 <dd>
@@ -187,7 +187,7 @@
 <h2 id="_user_dashboard"><a class="anchor" href="#_user_dashboard"></a>User dashboard</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The user dashboard is a web application to launch <strong>Workspaces</strong>. It lets authenticated users create, manage, stop or delete <strong>DevWorkspaces</strong>. It parses and converts a <strong>Devfile</strong> provided by an authenticated user into OpenShift Custom Resources.</p>
+<p>The user dashboard is a web application to launch <strong>Workspaces</strong>. It lets authenticated users create, manage, stop, or delete <strong>DevWorkspaces</strong>. It parses and converts a <strong>Devfile</strong> provided by an authenticated user into OpenShift Custom Resources.</p>
 </div>
 </div>
 </div>
@@ -235,13 +235,13 @@
 <h2 id="_user_workspaces"><a class="anchor" href="#_user_workspaces"></a>User workspaces</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <strong>Workspace</strong> is composed of Pods, Services, Ingresses, Storage Volumes and other OpenShift objects. These resources enable developers to code, test, build, debug and deploy applications using a web based IDE. User workspaces are web IDEs running in containers.</p>
+<p>A <strong>Workspace</strong> is composed of Pods, Services, Ingresses, Storage Volumes, and other OpenShift objects. These resources enable developers to code, test, build, debug, and deploy applications using a web based IDE. User workspaces are web IDEs running in containers.</p>
 </div>
 <div class="paragraph">
-<p>A OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.</p>
+<p>An OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.</p>
 </div>
 <div class="paragraph">
-<p>The Devfile is used to specify the tools and runtime applications in a OpenShift Dev Spaces workspace.</p>
+<p>The Devfile is used to specify the tools and runtime applications in an OpenShift Dev Spaces workspace.</p>
 </div>
 </div>
 </div>
@@ -260,7 +260,7 @@
 <p>Authenticating users with <em>OpenID Connect (OIDC)</em>. It uses the <em>OpenShift OAuth2</em> proxy.</p>
 </li>
 <li>
-<p>Applying OpenShift Role based access control (RBAC) policies to control access to any OpenShift Dev Spaces resource.</p>
+<p>Applying OpenShift Role-based access control (RBAC) policies to control access to any OpenShift Dev Spaces resource.</p>
 </li>
 </ul>
 </div>
