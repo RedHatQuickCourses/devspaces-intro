@@ -68,7 +68,7 @@ The Devfile is used to specify the tools and runtime applications in an OpenShif
 
 == Gateway
 
-The OpenShift Dev Spaces gateway, based on the open source https://traefik.io/traefik[Traefik] cloud-native API gateway and proxy server, has the following roles:
+The OpenShift Dev Spaces gateway, based on the open source https://traefik.io/traefik[Traefik^] cloud-native API gateway and proxy server, has the following roles:
 
 * Routing requests from end users.
 * Authenticating users with _OpenID Connect (OIDC)_. It uses the _OpenShift OAuth2_ proxy.

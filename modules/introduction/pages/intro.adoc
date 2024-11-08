@@ -102,7 +102,7 @@ Although Red Hat OpenShift Dev Spaces is based on the upstream, open source Ecli
 
 == Demonstration: Walkthrough of Red Hat OpenShift Dev Spaces features
 
-Watch this short 20-minute video showing a brief walkthrough of the most important features of Dev Spaces. You can play with the product for free by launching your own instance by going to https://developers.redhat.com/products/openshift-dev-spaces/overview.
+Watch this short 20-minute video showing a brief walkthrough of the most important features of Dev Spaces. You can play with the product for free by launching your own instance by going to https://developers.redhat.com/products/openshift-dev-spaces/overview[window=_blank].
 
 video::Jfd0F0-uYfU[youtube,title=Walkthrough of Red Hat OpenShift Dev Spaces features,width=800,height=600]
 
