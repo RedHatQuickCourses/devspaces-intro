@@ -8,7 +8,7 @@ This course is the first in a series of 5 courses about **Red{nbsp}Hat OpenShift
 . https://redhatquickcourses.github.io/devspaces-admin[Red Hat OpenShift Dev Spaces Administration^]
 . https://redhatquickcourses.github.io/devspaces-security[Securing Access to Red Hat OpenShift Dev Spaces^]
 . https://redhatquickcourses.github.io/devspaces-workspaces[Creating and Customizing Workspaces in Red Hat OpenShift DevSpaces^]
-. Configuring Plugins in Red Hat OpenShift Dev Spaces (_Under Development_)
+. https://redhatquickcourses.github.io/devspaces-plugins[Configuring Plugins in Red Hat OpenShift Dev Spaces^]
 
 NOTE: This introductory course is focused on the **"WHAT"** and **"WHY"** of Red Hat OpenShift Dev Spaces.
 The **"HOW"** (detailed configuration, workspace creation, customization, and integration of plugins) is covered in the later courses in the learning path (courses 2 to 5).
