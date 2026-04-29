@@ -71,7 +71,7 @@ video::DrdcRoZOO9A[youtube,title=Red Hat OpenShift Dev Spaces Overview,width=800
 
 The following are the notable features of the product:
 
-* **VS Code and JetBrains IDEs in the browser** - OpenShift Dev Spaces includes **Microsoft Visual Studio Code - Open Source** and **JetBrains IntelliJ IDEA**. You can choose which IDE to run in your cloud development environments. You need a machine capable of running a modern web browser to code, build, test, deploy, and debug on OpenShift. Administrators and developers can customize their Dev Spaces instance to support multiple programming language environments. Each developer gets his own dedicated *Workspace* to work with source code.
+* **VS Code and JetBrains IDEs in the browser** - OpenShift Dev Spaces includes **Microsoft Visual Studio Code - Open Source** and **JetBrains IntelliJ IDEA**. You can choose which IDE to run in your cloud development environments. You need a machine capable of running a modern web browser to code, build, test, deploy, and debug on OpenShift. Administrators and developers can customize their Dev Spaces instance to support multiple programming language environments. Each developer gets isolated personal *Workspace* to work with source code.
 
 * **Developer workspaces defined as code** - Customize your workspaces using a YAML file (called a **Devfile**). The development environments are defined as code, which makes them consistent and eliminates "works on my machine" issues. You can customize the following:
 
@@ -86,9 +86,11 @@ The following are the notable features of the product:
 
 * **Kubernetes/OpenShift development made easy** - Build and test cloud-native applications on OpenShift without having to configure access credentials manually. Development environments run on OpenShift, and are pre-configured with developer credentials.
 
-* **Ready-to-use Templates based on Red Hat technologies** - Leverage the bundled well-tested, certified container images for popular stacks (programming language environments) as the base for your enterprise-grade applications. Use images as is, or customize them further to adapt to your needs. You can maintain custom images and Devfiles in your own Devfile registry.
+* **Ready-to-use starter stacks and sample Devfiles based on Red Hat technologies** - Leverage the bundled well-tested, certified container images for popular stacks (programming language environments) as the base for your enterprise-grade applications. Use images as is, or customize them further to adapt to your needs. You can maintain custom images and Devfiles in your own Devfile registry.
 
 * **Efficient image builds with fuse-overlays storage driver** - enable faster builds and more optimized storage usage for `podman build` and `buildah` tools within your Red Hat OpenShift Dev Spaces workspace.
+
+* **Universal Developer Image (UDI)** - provides a prebuilt workspace image with common developer tools.
 
 === Differences between Eclipse Che and Red Hat OpenShift Dev Spaces
 

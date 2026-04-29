@@ -8,7 +8,7 @@ Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the
 
 The product consists of a set of components interacting with each other to provide the necessary functionality for a web-based IDE. 
 
-image::devspaces-arch.png[title=Red Hat OpenShift Dev Spaces Architecture (High Level)]
+image::devspaces-arch1.png[title=Red Hat OpenShift Dev Spaces Architecture (High Level)]
 
 == Dev Spaces operator
 
@@ -25,7 +25,7 @@ On a cluster with the OpenShift Dev Spaces operator installed, you will create a
 * User dashboard
 * Devfile registries
 * Dev Spaces server
-* Plug-in registry
+* Extension registries (Open VSX)
 
 == Dev Workspace operator
 
@@ -54,15 +54,19 @@ The OpenShift Dev Spaces server is responsible for:
 * Integrating with Git services providers, to fetch and validate Devfiles and perform authentication
 * Providing a REST API for other components and external services
 
-== Plug-in registry
+== Extension registries (Open VSX)
 
-Each OpenShift Dev Spaces workspace starts with a specific editor and set of associated IDE extensions. The OpenShift Dev Spaces plugin registry provides the list of available editors and editor extensions.
+Each Red Hat OpenShift Dev Spaces workspace starts with a specific editor and associated IDE extensions. Extensions are typically sourced through Open VSX registries, while the embedded plug-in registry is deprecated.
 
 == User workspaces
 
 A **Workspace** is composed of Pods, Services, Ingresses, Storage Volumes, and other OpenShift objects. These resources enable developers to code, test, build, debug, and deploy applications using a web based IDE. User workspaces are web IDEs running in containers.
 
 An OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.
+
+== Universal Developer Image (UDI)
+
+Provides a default preconfigured workspace image with common developer tools.
 
 The Devfile is used to specify the tools and runtime applications in an OpenShift Dev Spaces workspace.
 
@@ -79,7 +83,7 @@ It controls access to the following components:
 * User dashboard
 * Devfile registries
 * Dev Spaces server
-* Plug-in registry
+* Extension registries (Open VSX)
 * User workspaces
 
 == References
