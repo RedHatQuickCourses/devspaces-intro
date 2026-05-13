@@ -274,7 +274,7 @@ Cloud development environments (CDEs) provide software developers with remote, r
 <div class="ulist">
 <ul>
 <li>
-<p><strong>VS Code and JetBrains IDEs in the browser</strong> - OpenShift Dev Spaces includes <strong>Microsoft Visual Studio Code - Open Source</strong> and <strong>JetBrains IntelliJ IDEA</strong>. You can choose which IDE to run in your cloud development environments. You need a machine capable of running a modern web browser to code, build, test, deploy, and debug on OpenShift. Administrators and developers can customize their Dev Spaces instance to support multiple programming language environments. Each developer gets his own dedicated <strong>Workspace</strong> to work with source code.</p>
+<p><strong>VS Code and JetBrains IDEs in the browser</strong> - OpenShift Dev Spaces includes <strong>Microsoft Visual Studio Code - Open Source</strong> and <strong>JetBrains IntelliJ IDEA</strong>. You can choose which IDE to run in your cloud development environments. You need a machine capable of running a modern web browser to code, build, test, deploy, and debug on OpenShift. Administrators and developers can customize their Dev Spaces instance to support multiple programming language environments. Each developer gets isolated personal <strong>Workspace</strong> to work with source code.</p>
 </li>
 <li>
 <p><strong>Developer workspaces defined as code</strong> - Customize your workspaces using a YAML file (called a <strong>Devfile</strong>). The development environments are defined as code, which makes them consistent and eliminates "works on my machine" issues. You can customize the following:</p>
@@ -308,10 +308,13 @@ Cloud development environments (CDEs) provide software developers with remote, r
 <p><strong>Kubernetes/OpenShift development made easy</strong> - Build and test cloud-native applications on OpenShift without having to configure access credentials manually. Development environments run on OpenShift, and are pre-configured with developer credentials.</p>
 </li>
 <li>
-<p><strong>Ready-to-use Templates based on Red Hat technologies</strong> - Leverage the bundled well-tested, certified container images for popular stacks (programming language environments) as the base for your enterprise-grade applications. Use images as is, or customize them further to adapt to your needs. You can maintain custom images and Devfiles in your own Devfile registry.</p>
+<p><strong>Ready-to-use starter stacks and sample Devfiles based on Red Hat technologies</strong> - Leverage the bundled well-tested, certified container images for popular stacks (programming language environments) as the base for your enterprise-grade applications. Use images as is, or customize them further to adapt to your needs. You can maintain custom images and Devfiles in your own Devfile registry.</p>
 </li>
 <li>
 <p><strong>Efficient image builds with fuse-overlays storage driver</strong> - enable faster builds and more optimized storage usage for <code>podman build</code> and <code>buildah</code> tools within your Red Hat OpenShift Dev Spaces workspace.</p>
+</li>
+<li>
+<p><strong>Universal Developer Image (UDI)</strong> - provides a prebuilt workspace image with common developer tools.</p>
 </li>
 </ul>
 </div>

@@ -115,7 +115,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/devspaces-arch.png" alt="devspaces arch">
+<img src="_images/devspaces-arch1.png" alt="devspaces arch1">
 </div>
 <div class="title">Figure 1. Red Hat OpenShift Dev Spaces Architecture (High Level)</div>
 </div>
@@ -154,7 +154,7 @@
 <p>Dev Spaces server</p>
 </li>
 <li>
-<p>Plug-in registry</p>
+<p>Extension registries (Open VSX)</p>
 </li>
 </ul>
 </div>
@@ -224,10 +224,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_plug_in_registry"><a class="anchor" href="#_plug_in_registry"></a>Plug-in registry</h2>
+<h2 id="_extension_registries_open_vsx"><a class="anchor" href="#_extension_registries_open_vsx"></a>Extension registries (Open VSX)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each OpenShift Dev Spaces workspace starts with a specific editor and set of associated IDE extensions. The OpenShift Dev Spaces plugin registry provides the list of available editors and editor extensions.</p>
+<p>Each Red Hat OpenShift Dev Spaces workspace starts with a specific editor and associated IDE extensions. Extensions are typically sourced through Open VSX registries, while the embedded plug-in registry is deprecated.</p>
 </div>
 </div>
 </div>
@@ -239,6 +239,14 @@
 </div>
 <div class="paragraph">
 <p>An OpenShift Dev Spaces workspace contains the source code of the projects, persisted in an OpenShift Persistent Volume (PV). Dev Spaces components and services have read-write access to this shared directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_universal_developer_image_udi"><a class="anchor" href="#_universal_developer_image_udi"></a>Universal Developer Image (UDI)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Provides a default preconfigured workspace image with common developer tools.</p>
 </div>
 <div class="paragraph">
 <p>The Devfile is used to specify the tools and runtime applications in an OpenShift Dev Spaces workspace.</p>
@@ -279,7 +287,7 @@
 <p>Dev Spaces server</p>
 </li>
 <li>
-<p>Plug-in registry</p>
+<p>Extension registries (Open VSX)</p>
 </li>
 <li>
 <p>User workspaces</p>
