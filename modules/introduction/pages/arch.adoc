@@ -8,7 +8,7 @@ Red Hat OpenShift Dev Spaces runs (as a set of managed containers) on top of the
 
 The product consists of a set of components interacting with each other to provide the necessary functionality for a web-based IDE. 
 
-image::devspaces-arch1.png[title=Red Hat OpenShift Dev Spaces Architecture (High Level)]
+image::devspaces-arch.png[title=Red Hat OpenShift Dev Spaces Architecture (High Level)]
 
 == Dev Spaces operator
 
@@ -25,7 +25,7 @@ On a cluster with the OpenShift Dev Spaces operator installed, you will create a
 * User dashboard
 * Devfile registries
 * Dev Spaces server
-* Extension registries (Open VSX)
+* Plugin registries (Open VSX)
 
 == Dev Workspace operator
 
@@ -54,9 +54,9 @@ The OpenShift Dev Spaces server is responsible for:
 * Integrating with Git services providers, to fetch and validate Devfiles and perform authentication
 * Providing a REST API for other components and external services
 
-== Extension registries (Open VSX)
+== Plugin registry
 
-Each Red Hat OpenShift Dev Spaces workspace starts with a specific editor and associated IDE extensions. Extensions are typically sourced through Open VSX registries, while the embedded plug-in registry is deprecated.
+Serves IDE extensions. By default an embedded Open VSX registry with a limited set of extensions - you will want to point this at the public Open VSX registry.
 
 == User workspaces
 
